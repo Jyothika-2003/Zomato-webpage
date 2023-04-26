@@ -9,10 +9,13 @@ body {
 }
 
 .navbar {
+    height: 60px;
+    z-index: 8;
     display: flex;
     align-items: center;
     justify-content: space-around;
     background-color: #f9fafc;
+    box-shadow: 0px 3px 65px 0px rgba(0,0,0,.15);
 }
 
 .navbar__brand {
@@ -47,14 +50,19 @@ body {
     padding: 20px;
     margin: 0 auto;
 }
+
 .hero__image__container {
     width: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero__image {
     width: 100%;
     border-radius: 10px;
+    position: absolute;
     box-shadow: 0 25px 50px -12px rgba(0 0 0 / 25%);
+    z-index: 2;
 }
 
 .hero__text {
@@ -64,6 +72,15 @@ body {
     color: #1d3557;
 }
 
+.hero__image__shape {
+    z-index: -1;
+}
+
+.hero__image__pattern {
+    position: absolute;
+    z-index: -30;
+}
+
 .food__card__description {
     padding: 15px;
 }
@@ -71,6 +88,7 @@ body {
 .food__card {
     background-color: #f9fafc;
     margin-bottom: 10px;
+    border-radius: 8px 8px 0 0;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -92,10 +110,33 @@ body {
     color: #1d3557;
 }
 
+.explore__menu__viewmore {
+    padding: 15px 0;
+    margin: 16px auto;
+}
+
+.food__list__view__more {
+    background-image: linear-gradient(
+        to right,
+        #ff512f 0%,
+        #dd2476 51%,
+        #ff512f 100%
+    );
+    border-radius: 8px;
+    width: 100%;
+    display: block;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+}
+
 @media (min-width: 768px) {
 
     .explore__menu__lists {
-        margin-top: 50px;
+        margin-top: 70px;
         display: flex;
         gap: 15px;
         padding: 0 30px;
@@ -118,11 +159,21 @@ body {
         #ff512f 100%
         );
         z-index: -3;
-        transform: skewY(-3deg);
+        transform: skewY(-7deg);
     }
 
+    .food__card {
+        border-radius: 8px;
+    }
+
+    .food__list__view__more {
+        margin-top: 25px;
+        margin-bottom: 25px;
+        background-image: none;
+    }  
+
     #pizza__card {
-        margin-top: -20px;
+        margin-top: -30px;
         margin-bottom: 30px;
     }
 
@@ -134,6 +185,7 @@ body {
     .hero__container {
         margin-top: 20px;
         display: flex;
+        justify-content: space-between;
         flex-direction: row-reverse;
         align-items: center;
     }
@@ -163,7 +215,8 @@ body {
     }
 
     .hero__text {
-        font-size: 50px;
+        font-size: 60px;
+        font-weight: 600;
     }
 
     .explore__menu__text {
