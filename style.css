@@ -9,7 +9,7 @@ body {
 }
 
 .navbar {
-    height: 60px;
+    height: 70px;
     z-index: 8;
     display: flex;
     align-items: center;
@@ -178,8 +178,6 @@ body {
 .email__container {
     margin: 80px auto;
     padding: 15px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .email__heading__text {
@@ -202,12 +200,46 @@ body {
     padding: 8px;
 }
 
+.email__imput:active {
+     border: 1px solid rgb(228, 228, 9);
+}
+
 .email__button {
     padding: 8px 16px;
     margin: 15px;
     width: 100px;
     border: none;
     cursor: pointer;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(
+        to right,
+        #ff512f 0%,
+        #dd2476 51%,
+        #ff512f 100%
+    ); 
+    border-radius: 14px 14px 0px 0px;
+}
+
+
+.footer__logo {
+    width: 300px;
+    filter: brightness(0) invert(1);
+}
+
+ul {
+    list-style-type: none;
+    color: white;
+    margin-top: -5px;
+}
+
+li {
+    margin: 4px 0px;
 }
 
 
@@ -296,6 +328,12 @@ body {
         padding: 10px;
         width: 100%;
     }
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
 }
 
 @media (min-width: 1024px){
@@ -348,6 +386,12 @@ body {
         font-size: 55px;
     }
 
+    .button__primary {
+        font-size: 20px;
+        width: 200px;
+        padding: 20px;
+    }
+
     .explore__menu__text {
         font-size: 60px;
         margin-bottom: 50px;
@@ -357,8 +401,9 @@ body {
         font-size: 20px;
     }
 
-    .restuarant__text {
-        font-size: 60px;
+    .restaurant__text {
+        font-size: 65px;
+        line-height: 1;
     }
 
     .restaurant1 ,.restaurant3 {
@@ -369,6 +414,27 @@ body {
     .restaurant2 ,.restaurant4 {
         height: 300px;
         width: 350px;
+    }
+
+    .email__heading__text {
+        font-size: 65px;
+        margin-bottom: 10px;
+    }
+
+    .email__input {
+        padding: 18px;
+    }
+
+    footer {
+        padding: 30px;
+    }
+
+    .footer__logo {
+        width: 350px;
+    }
+
+    li {
+        font-size: 25px;
     }
 
 }
