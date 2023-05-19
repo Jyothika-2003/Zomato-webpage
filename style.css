@@ -382,6 +382,10 @@ li {
         max-width: 72%;
     }
 
+    .hero__container {
+        gap: 100px;
+    }
+
     .hero__text {
         font-size: 55px;
     }
@@ -397,8 +401,24 @@ li {
         margin-bottom: 50px;
     }
 
-    .food__list__view__more {
+   .food__card {
+        width: 33.3%;
+    } 
+
+    .food__card__description {
+        padding: 30px;
+    }
+
+    .food__title {
+        font-size: 30px;
+    }
+
+    .food__description {
         font-size: 20px;
+    }
+
+    .food__list__view__more {
+        font-size: 30px;
     }
 
     .restaurant__text {
